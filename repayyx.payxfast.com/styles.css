@@ -1,5 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
-    font-family: Arial,sans-serif;
+  font-family: Arial,sans-serif;
     height: auto;
     width: auto;
     background-color: #FDFEFE;
@@ -7,13 +14,9 @@ body {
     padding: 20px;
 }
 
+
 hr {
     border: 0.1px  solid Gainsboro;
-}
-
-img {
-  margin-left:20%;
-  margin-right: 10%;
 }
 
 p {
@@ -26,38 +29,103 @@ h1 h2 h3 h4 h5 h6{
   font-size: 10px;
 }
 
+
+/* Container */
+.container {
+  width: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: left;
 }
 
-box1 {
-    background-color: #FDFEFE;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px hsla(9, 100%, 64%, 0);
-    max-width: 600px;
-    margin: auto;
-    transition: transform 0.3s;
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  color: #333;
+  font-size: 0.9em;
 }
 
-.box1:hover {
-    transform: scale(1.02);
+.header .icons i {
+  margin-left: 10px;
 }
 
-.cpb {
-    background-color: #f8f8f8;
-    color:DeepSkyBlue;
-    width:  100%;
-    height: 50px;
-    border: 1px solid #00BFFF;
-    padding: 1px 1px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+/* Content */
+.content h1 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
 }
 
-.cpb:hover {
-    background-color: #f8f8f8;
-    transform: scale(1.05);
+.info p {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
 }
+
+.info span {
+  color: #555;
+}
+
+button {
+  padding: 6px 12px;
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+/* Section Title */
+.section-title {
+  color: #007bff;
+  font-size: 0.9em;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Payment Options */
+.payment-options {
+  margin: 15px 0;
+}
+
+.payment-options label {
+  display: flex;
+  align-items: left;
+  margin: 8px 0;
+}
+
+.payment-options img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* UTR Instruction */
+.utr-instruction {
+  color: #007bff;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+#utr {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
 
 .a1 {
     background-color: #FDFEFE;
@@ -65,16 +133,9 @@ box1 {
     font-size: 12px;
 }
 
-.inp {
-    width: 85%;
-    padding: 10px;
-    margin-bottom: 0px;
-    border: 1px solid #ccc;
-    border-radius: 0px;
-    margin: auto;
-}
 
-.btn1, .btn2 {
+
+.submit-btn, .error-btn {
     width: 85%;
     height: 50px;
     padding: 10px 15px;
@@ -84,48 +145,17 @@ box1 {
     transition: background 0.3s, transform 0.3s;
 }
 
-.btn1 {
+..submit-btn {
     background-color: #27A2FA;
     color: white;
 }
-
-.btn1:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-.btn2 {
+ {
     background-color: #FD7320;
     color: white;
 }
 
-.btn2:hover {
-    background-color: #FF8000;
-    transform: scale(1.05);
-}
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
-.modal-content {
-    background-color: #ffffff;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #000000;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 10px;
-    animation: fadeIn 0.5s;
-}
 /* Notification Popup */
 .notification {
   width: 100%;
@@ -158,16 +188,11 @@ box1 {
 }
 
 @media only screen and (max-width: 600px) 
-    .box1 {
-        padding: 15px;
-    }
-
-    .btn1, .btn2, .cpb {
+   
+    .submit-btn, .error-btn{
         width: 100%;
         margin: 5px 0;
         font-size: 16px;
     }
 
-    .inp {
-        width: 95%;
-}
+    
